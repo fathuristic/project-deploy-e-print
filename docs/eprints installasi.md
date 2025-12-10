@@ -1,7 +1,7 @@
 Install dependencies eprints
 
 ```
-  sudo apt install perl libncurses5 libselinux1 apache2 libapache2-mod-perl2 \
+  sudo apt install perl libncurses5 apache2 libapache2-mod-perl2 \
 libxml-libxml-perl libunicode-string-perl libterm-readkey-perl \
 libmime-lite-perl libmime-types-perl libdigest-sha-perl libdbd-mysql-perl \
 libxml-parser-perl libxml2-dev libxml-twig-perl libarchive-any-perl \
