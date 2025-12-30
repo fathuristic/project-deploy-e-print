@@ -47,12 +47,6 @@ buat user baru
 sudo adduser eprints
 ```
 
-tambahkan ke grup
-```
-sudo usermod -a -G eprints www-data
-sudo usermod -a -G www-data eprints
-```
-
 Buka file envvars dengan teks editor nano dengan perintah berikut:
 ```
 nano /etc/apache2/envvars
@@ -149,37 +143,17 @@ Install aplikasi net-tools untuk mengetahui informasi jaringan dari virtual mach
 apt install net-tools
 ```
 
-Tampilkan konfigurasi antarmuka jaringan, kemudian catat inet alamat IP dari virtual machine debian 12 pada bagian yang bertanda xxx
+Tampilkan konfigurasi antarmuka jaringan, kemudian catat inet alamat IP dari virtual machine debian 12
 ```
-ifconfig
+ip a
 ```
-
-ens33: flags=4163  mtu 1500
-        inet xxx.xxx.xxx.xxx  netmask 255.255.255.0  broadcast 192.168.83.255
-        inet6 fe80::20c:29ff:fe4b:9846  prefixlen 64  scopeid 0x20
-        ether 00:0c:29:4b:98:46  txqueuelen 1000  (Ethernet)
-        RX packets 183076  bytes 261621540 (249.5 MiB)
-        RX errors 0  dropped 0  overruns 0  frame 0
-        TX packets 49109  bytes 3753808 (3.5 MiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+<img width="840" height="293" alt="image" src="https://github.com/user-attachments/assets/d66301dc-6b6a-453b-bc3b-9988b7681634" />
 
 
-    Tambahkan entri host pada sistem operasi windows agar hostname repositori yang terinstal di Debian (Virtual Machine) dapat diakses di browser windows.
-1.Buka Notepad sebagai Administrator:
-  • Klik kanan pada ikon Notepad atau perangkat lunak teks editor lainnya.
-  • Pilih "Run as administrator."
-2.Buka File Hosts:
-  • Di jendela Notepad, klik menu "File" > "Open"
-  • Navigasi ke direktori C:\Windows\System32\drivers\etc\
-  • Pilih opsi "All Files" di bagian bawah jendela.
-  • Pilih file hosts dan klik "Open".
-3.Tambahkan Entri Baru:
-  • Di bagian akhir file hosts, tambahkan baris baru yang menjelaskan ip address dan hostname repositori.
-  • Formatnya adalah <alamat_IP> <space> <nama_domain> contoh: 192.168.253.153 repositori.tes.ac.id
-4.Simpan perubahan dengan menekan Ctrl + S
+
 
 Buka Browser (Chrome, Firefox, Edge, Opera dll.) dan coba akses hostname repositori pada address bar
 ```
-repositori.tes.ac.id
+127.0.0.1
 ```
 
